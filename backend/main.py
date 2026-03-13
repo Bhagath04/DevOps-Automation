@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from rag_engine import query_rag
+from backend.rag_engine import query_rag
 
 app = FastAPI(title="DevSecOps AI Assistant")
 
