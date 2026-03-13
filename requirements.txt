@@ -6,3 +6,5 @@ chromadb
 openai
 streamlit
 python-dotenv
+sentence-transformers
+llama-index
