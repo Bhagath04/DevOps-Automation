@@ -8,3 +8,4 @@ streamlit
 python-dotenv
 sentence-transformers
 llama-index
+llama-index-embeddings-huggingface
