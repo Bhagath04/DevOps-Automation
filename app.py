@@ -1,3 +1,1 @@
-# Contents of app.py
-
-# Your backend application logic here.
+# Complete code for app.py here
