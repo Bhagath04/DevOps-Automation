@@ -1,11 +1,1 @@
-fastapi
-uvicorn
-gunicorn
-llama-index
-chromadb
-openai
-streamlit
-python-dotenv
-sentence-transformers
-llama-index
-llama-index-embeddings-huggingface
+# Your requirements here
