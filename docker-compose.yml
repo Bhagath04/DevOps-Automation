@@ -1,0 +1,52 @@
+version: '3.7'
+
+services:
+  backend:
+    image: backend-image:latest
+    restart: always
+    environment:
+      - DATABASE_URL=postgres://user:password@db:5432/dbname
+      - REDIS_URL=redis://cache:6379
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: frontend-image:latest
+    restart: always
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=dbname
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  cache:
+    image: redis:latest
+    restart: always
+
+  chatbot:
+    image: chatbot-image:latest
+    restart: always
+    ports:
+      - "6000:6000"
+
+  prometheus:
+    image: prom/prometheus:latest
+    restart: always
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    ports:
+      - "3001:3000"
+
+volumes:
+  db-data: {}
