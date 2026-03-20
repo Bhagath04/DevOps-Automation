@@ -1,3 +1,12 @@
 # Your requirements here
-uvicorn
 fastapi
+uvicorn
+gunicorn
+llama-index
+chromadb
+openai
+streamlit
+python-dotenv
+sentence-transformers
+llama-index
+llama-index-embeddings-huggingface
